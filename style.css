@@ -6,8 +6,8 @@
 
 .container{
     max-width: 1400px;
-   
-    margin: 0 auto;
+   /* padding: 20px; */
+    /* margin: 50px auto; */
 }
 
 .top-bar{
@@ -60,61 +60,74 @@
 }
 
 .banner {
-    background-image: url("assets/images/Rectangle.png"); 
-    height: 500px;
+    background-image: url("assets/images/Rectangle.png");
     width: 100%;
+    height: 625px;
     position: relative;
+    display: flex;
+    flex-direction: row; /* text left, stars right */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center; /* vertically center content */
+    padding: 0 50px;
 }
 
-.text{
+.text {
     width: 50%;
-    padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.text h1{
+.text h1 {
     font-size: 64px;
 }
 
-.text p{
+.text p {
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
-    width: 100%;
 }
 
-.text button{
+.text button {
     background-color: black;
     color: white;
     width: 200px;
     border-radius: 20px;
     padding: 10px;
+    border: none;
+    cursor: pointer;
 }
 
-.background{
+.backgrond {
     width: 50%;
     position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.star1{
+.star1, .star2 {
     position: absolute;
-    top: 327px;
-    left: 750px;
-}  
+}
 
-.star2{
-       position: absolute;
-    top: 111px;
-    left: 1213px;
-}   
+.star1 {
+       bottom: 50px;
+    right: 470px;
+}
+
+.star2 {
+    bottom: 150px;
+    right: 50px;
+}
 
 .brands{
     background-color: black;
     display: flex;
     padding: 30px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .new{
@@ -235,11 +248,14 @@ font-size: 30px;
     max-width: 1254px;
     margin: 0 auto;
 }
+.right{
+    display: flex;
+}
 .reviews{
     display: flex;
-
 }
-.review{
+
+.review1,.review2,.review3{
     height: 240px;
     width: 30%;
     border: 1px solid #ccc;
@@ -264,6 +280,8 @@ font-size: 30px;
     margin: 50px auto;
     position: relative;
     top: 129px;
+    flex-wrap: nowrap;
+    gap: 10px;
 }
 .textside{
     width: 800px;
@@ -336,3 +354,145 @@ margin-top: 10px;
     margin: 50px;
 }
 
+@media screen  and (max-width:640px){
+    .container{
+        padding: 10px;
+    }
+    .top-bar{
+        font-size: 10px;
+    }
+    .botum-bar{
+      flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+    }
+    .botum-bar ul{
+        flex-direction: column;
+        display: none;
+        
+    }
+    .search{
+        width: 100%;
+    }
+    .cross{
+        display: none;
+    }
+    .text{
+        width: 100%;
+
+    }
+    .text h1{
+        font-size: 30px;
+        height: 93px;
+        width: 315px;  
+    }
+    
+.text button{
+    width: 100%;
+}
+
+   .banner {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .text, .backgrond {
+        width: 100%;
+    }
+
+    .text h1 {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .star1 {
+        /* bottom: 50px;
+        right: 100px; */
+        display: none;
+    }
+
+    .star2 {
+        /* bottom: 150px;
+        right: 20px; */
+        display: none;
+    }
+
+    .banner img { 
+        max-width: 100%;
+        height: auto;
+        object-fit: cover; /* image kabhi distort nahi hogi */
+    }
+    .brands{
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+    .brands img{
+        width: 100px;
+        height: auto;
+       
+    }
+    .card-1{
+        width: 100%;
+    }
+    .boxes{ width: 100%;}
+    .top, .botum {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .casual, .formal, .ladies, .gym {
+        width: 100%; 
+        height: 100px; 
+        padding: 15px;
+        background-size: cover;
+
+    }
+
+    .casual h2, .formal h2, .ladies h2, .gym h2 {
+        font-size: 24px;
+    }
+    .review1{
+        width: 100%;
+    }
+.review2,.review3{
+    display: none;
+}
+    .newshelter{
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+}
+.textside h1{
+    font-size: 30px;
+    width: 100%;
+}
+.inputside,.inputside button {
+    width: 100%;
+}
+.foot{
+    flex-direction: column;
+    gap: 10px;
+}
+ .shop, .company, .help, .faqs, .resourses {
+        width: 100%;            
+        text-align: center;    
+    }
+    .footer-bottum {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;     
+    }
+
+    .footer-bottum img {
+        width: 50px;          
+        height: auto;
+    }
+
+    .footer hr {
+        width: 90%;          
+        margin: 30px auto;
+    }
+}
