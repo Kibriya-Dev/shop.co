@@ -771,12 +771,12 @@ margin-top: 10px;
    
 }
 /* 1441px se 2560px screens ke liye */
+/* 1441px se 2560px screens ke liye */
 @media screen and (min-width: 1441px) and (max-width: 2560px) {
-
     .container {
-        max-width: 2400px;
-        padding: 40px;
+        max-width: 2200px; /* content center me rahe */
         margin: 0 auto;
+        padding: 40px;
     }
 
     .banner {
@@ -784,9 +784,16 @@ margin-top: 10px;
         padding: 0 80px;
     }
 
+
+
     .text h1 {
         font-size: 72px;
     }
+    .text p{
+        font-size: 20px;
+    }
+    .star1{left: 180px;}
+    .star2{right: 170px;}
 
     .cards {
         gap: 30px;
@@ -798,10 +805,44 @@ margin-top: 10px;
         margin-bottom: 30px;
     }
 
+    .box {
+        width: 90%;      /* poora section center me */
+        padding: 50px 40px;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .boxes {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 30px;
+        flex-direction: column;
+    }
+
     .casual, .formal, .ladies, .gym {
-        width: 48%;
+        width: 48%;      /* 2 per row */
         height: 300px;
+        border-radius: 20px;
         padding: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+    .coustomer{
+
+        max-width: 90%;
+    }
+     .reviews{
+       width: 100%;
+        justify-content: space-around;
+    }
+    .review1,.review2,.review3{
+        width: 23%;
+        margin: 20px;
     }
 
     .newshelter {
@@ -810,23 +851,47 @@ margin-top: 10px;
         flex-wrap: nowrap;
     }
 
-    .textside h1 {
-        font-size: 60px;
+    .textside{
+        width: 60%;
+    }
+    .inputside{
+        width: 40%;
     }
 
-    .inputside, .inputside button {
-        width: 50%;
+
+    .textside{
+        width: 60%;
+    }
+    .inputside{
+        width: 40%;
+    }
+
+
+    .textside h1 {
+        font-size: 50px;
+    }
+    .inputside button{
+        width: 100%;
+    }
+    .foot{
+        font-size: 20px;
     }
 
     .footer hr {
         width: 90%;
     }
+    .footer-bottum{
+        font-size: 20px;
+        justify-content: space-around;
+        width: 100%;
+    }
 }
 
-/* 2561px+ ke liye */
+/* 2561px+ screens ke liye (ultra wide/projector) */
 @media screen and (min-width: 2561px) {
     .container {
-        max-width: 3000px;
+        max-width: 3000px; /* center me content */
+        margin: 0 auto;
         padding: 60px;
     }
 
@@ -838,33 +903,83 @@ margin-top: 10px;
     .text h1 {
         font-size: 80px;
     }
-    .star1{ right: 860px;}
+
+    .star1{
+        right: 860px;
+    }
     .star2{
         bottom: 250px;
         left: 783px;
     }
 
     .card-1 {
-        width: 18%; /* 5 cards easily fit */
+        width: 18%; /* 5 cards per row */
     }
-    .box{
+    .coustomer{
+        max-width: 2074px;
+    }
+    .reviews{
+       width: 100%;
+        justify-content: space-evenly;
+    }
+    .review1,.review2,.review3{
+        width: 23%;
+        margin: 20px;
+    }
 
+    .box {
+        width: 85%;
+        padding: 60px 50px;
+        margin: 60px auto;
     }
-    .boxes{}
+
+     .boxes {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 30px;
+        flex-direction: column;
+    }
 
     .casual, .formal, .ladies, .gym {
         width: 48%;
         height: 350px;
+        padding: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
+
 
     .newshelter {
         padding: 50px 80px;
+        width: 90%;
     }
+    .textside{
+        width: 60%;
+    }
+    .inputside{
+        width: 40%;
+    }
+
 
     .textside h1 {
         font-size: 50px;
     }
+    .inputside button{
+        width: 100%;
+    }
+    .foot {
+        font-size: 20px;
+        
+    }
+    .footer-bottum{
+        font-size: 20px;
+        justify-content: space-around;
+        width: 100%;
+    }
 }
+
 
 
 
